@@ -17,3 +17,10 @@ This project is to create a Raspberry Pi NAS (Network-Attatched-Storage) as a pr
 *Only needed for windows
 
 ## Setup
+
+The following steps will be performed to complete this project.
+
+### 1. Burn Linux distro to micro SD card.
+### 2. Prepare Linux distro for SSH.
+### 3. Physically set up Raspberry Pi on network.
+### 4. SSH into Raspberry Pi and set up account and network settings.
