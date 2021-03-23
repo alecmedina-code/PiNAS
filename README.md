@@ -12,8 +12,8 @@ This project is to create a Raspberry Pi NAS (Network-Attatched-Storage) as a pr
 
 ## Software Required
 - [Raspberry Pi Imager](https://www.raspberrypi.org/software/)
-
-If you are on Windows you will also need to download Putty for SSH capabilities.
-- [Putty](https://www.putty.org/)
+- [Putty*](https://www.putty.org/)
+- 
+*Only needed for windows
 
 ## Setup
