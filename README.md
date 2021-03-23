@@ -1,2 +1,2 @@
-# PiNAS
-This project is to assist in the creation of a raspberry pi NASA
+# Pi NAS
+This project is to assist in the creation of a raspberry pi NAS
