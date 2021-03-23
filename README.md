@@ -13,3 +13,5 @@ This project is to create a Raspberry Pi NAS (Network-Attatched-Storage) as a pr
 
 If you are on Windows you will also need to download Putty for SSH capabilities.
 - [Putty](https://www.putty.org/)
+
+## Setup
