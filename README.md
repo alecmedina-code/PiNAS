@@ -7,3 +7,9 @@ This project is to create a Raspberry Pi NAS (Network-Attatched-Storage) as a pr
 - Micro SD Card
 - SSD
 - Ethernet Cable
+
+## Software Required
+- [Raspberry Pi Imager](https://www.raspberrypi.org/software/)
+
+If you are on Windows you will also need to download Putty for SSH capabilities.
+- [Putty](https://www.putty.org/)
