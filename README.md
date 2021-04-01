@@ -17,6 +17,7 @@ This project is to create a Raspberry Pi NAS (Network-Attatched-Storage)
 *Only needed for windows
 
 ## Setup
+Before starting the setup you should find your gateway address and write this down. We will refer to this as gateway address for now on as it may differ among networks. 
 
 The following steps will be performed to complete this project.
 
