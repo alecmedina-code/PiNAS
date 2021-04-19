@@ -30,27 +30,27 @@ The following steps will be performed to complete this project. If you are using
 - Connect micro SD card to your computer. 
 
 - Open Raspberry Pi Imager.
-![rpi_imager](rpi_imager.png)
+![rpi_imager](images/rpi_imager.png)
 
 - Choose Raspberry Pi Os (32-bit) as the operating system. 
-![rpi_os](rpi_os.png)
+![rpi_os](images/rpi_os.png)
 
 - Choose your micro SD card as the storage device.
-![rpi_storage](rpi_storage.png)
+![rpi_storage](images/rpi_storage.png)
 
 - Click "WRITE".
 
 - Open new terminal at the boot drive (mounted micro SD after write). 
-![newterminal](newterminal.png)
+![newterminal](images/newterminal.png)
 
 - Type the following command in the terminal and press enter. This creates an SSH directory in the boot drive and enables SSH-ing for the Raspberry Pi. 
-![terminal](terminal.png)
+![terminal](images/terminal.png)
 
 - Insert your micro SD card into your Raspberry Pi and connect your Pi (highlighted in green below) to power and to your router via ethernet.
-![hardware](hardware.jpeg)
+![hardware](images/hardware.jpeg)
 
 - Type the following command in a new terminal and press enter. This will create an SSH session with the Raspberry Pi.
-![ssh](ssh.png)
+![ssh](images/ssh.png)
 
 - If asked "Are you sure you want to continue connecting (yes/no)?" type "yes" and press enter.
 
@@ -59,28 +59,28 @@ The following steps will be performed to complete this project. If you are using
 NOTE: We have now SSH'd into the Raspberry Pi.
 
 - Type the following command in the terminal and press enter. This will open a file where we can set our static IP address for Raspberry Pi.
-![dhcpcd](dhcpcd.png)
+![dhcpcd](images/dhcpcd.png)
 
 - Delete the lines between "# Example static IP configuration:" and "# It is possible to fall back to a static IP if DHCP fails:" and replace it with the following shown below. Here you should replace '192.168.1.254' with your router's IP and also replace the first three octets of '192.168.1.105/24' with the first three octets of your router's IP. 
-![staticip](staticip.png)
+![staticip](images/staticip.png)
 
 - After these changes have been made press control+O then enter to write to the file, then control+X to exit from the file.
 
 - Type the following command in the terminal and press enter. This will reboot the Raspberry Pi with the new network setup. 
-![reboot](reboot.png)
+![reboot](images/reboot.png)
 
 - Type the following command in the terminal and press enter. This will SSH into the Raspberry Pi again using the new static IP address. Here, you should use the static IP you set in the previous step.
-![sshnewip](sshnewip.png)
+![sshnewip](images/sshnewip.png)
 
 - If asked "Are you sure you want to continue connecting (yes/no)?" type "yes" and press enter.
 
 - When prompted for pi@192.168.1.105's password type "raspberry" and press enter.
 
 - Type the following command in the terminal and press enter. This will list all storage devices connected to the raspberry pi (including RAM so do not be alarmed if the list is lengthy).
-![fdisk](fdisk.png)
+![fdisk](images/fdisk.png)
 
 - If you scroll through you should see a disk named /dev/sda. This means 'storage device a'. If this is not your storage device's name, look for something similar. I know that my external SSD is 250 GB, as we can see this is close to the storage capacity of /dev/sda. This is another way to verify you are using the correct storage device. Near the bottom we see /dev/sda1, this is a partition on the drive. You may have more. We need to delete any partitions before continuing. 
-![sda](sda.png)
+![sda](images/sda.png)
 
 - Type the following commands in the terminal. This will delete the partitions on /dev/sda. If your drive is named something different you should use that name. If you have multiple partitions you should do the the last two lines for each partition. No terminal screen shots are provided as I do not want to erase the data off my drive.
 
