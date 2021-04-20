@@ -123,4 +123,49 @@ cd volume/
 sudo chmod 777 -R .
 ```
 
-- Type the following commands in the terminal and press enter. 
+- Type the following command in the terminal and press enter. This will open a file where we can automate the mounting of our drive partition to our volume directory. 
+![fstab](images/fstab.png)
+
+- Add the new code shown on the forth line below. This will set the partition /dev/sda1 to be automatically mounted to the directory /volume with ext4 format on boot.
+![fstabfinal](images/fstabfinal.png)
+
+- After these changes have been made press control+O then enter to write to the file, then control+X to exit from the file.
+
+- Type the following commands in the terminal and press enter. This will update all package links for the Raspberry Pi and install samba dependicies. Samba is a software package that implements SMB (Server Message Block) protocol to allow us to connect to the drive from any device.   
+
+```
+sudo apt-get update
+sudo apt-get install samba
+```
+
+- Type the following command in the terminal and press enter. This will open a file where we can set up our directory for SMB protocol and a few more settings. 
+![opensmb](images/opensmb.png)
+
+- Add the new code shown on the bottom four lines. This will setup the directory to be viewed as PiNAS on the network, with the path to the /volume directory and with writeable access to individuals with an account on the Raspberry Pi. 
+![smb](images/smb.png)
+
+- After these changes have been made press control+O then enter to write to the file, then control+X to exit from the file.
+
+- Type the following command in the terminal and press enter. This will restrart the samba server to accept the new settings we have created for our PiNAS. 
+
+```
+sudo systemctl restart smbd
+```
+
+- Type the following command in the terminal and press enter. This will let you create a new user and password for our user pi on the Samba SMB server. When prompted to enter a password, enter your desired password. You may want to eventually change your password for the Raspberry Pi itself, this is a different step. This step only setups a user on the Samba SMB server.
+
+```
+sudo smbpasswd -a pi
+New SMB password: 
+Retype new SMB passowrd: 
+Added user pi. 
+```
+
+- We have no completed the setup of our Raspberry Pi NAS. To connect to the PiNAS click on your desktop and then press cmd+k. This will open an application that allows us to connect to the PiNAS via SMB. Enter the following into the search bar. If your IP address was different, enter that IP. 
+![connect](images/connect.png)
+
+- When the next window appears, click on PiNAS and press OK.
+![volume](images/volume.png)
+
+- If everything was successful you should now see thew PiNAS mounted under Locations.
+![finder](images/finder.png)
