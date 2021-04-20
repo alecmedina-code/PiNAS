@@ -1,0 +1,6 @@
+#!/bin/bash
+SCRIPT="starship42*;sudo apt-get update;sudo apt-get install python3"
+echo Enter your router\'s IP: 
+read routerip
+ssh -l pi 192.168.1.105 ${SCRIPT}
+
