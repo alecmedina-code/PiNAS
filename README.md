@@ -1,4 +1,5 @@
 # Pi NAS
+**This was a project for school during my time at the University of Houston**
 This project is to create a Raspberry Pi NAS (Network-Attatched-Storage)
 
 ## Hardware Required 
